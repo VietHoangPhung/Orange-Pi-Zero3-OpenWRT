@@ -1,0 +1,33 @@
+# IDE/editor clutter
+*.swp
+*.tmp
+*.bak
+*.old
+
+# Build output
+build/
+*.o
+*.a
+*.so
+*.out
+*.elf
+*.ipk
+
+# OpenWRT-specific build dirs (from previous builds)
+bin/
+build_dir/
+dl/
+feeds/
+staging_dir/
+tmp/
+logs/
+package/feeds/
+.packages
+
+# Git-related
+.git
+.gitignore
+
+# Optional: OS clutter
+.DS_Store
+Thumbs.db
