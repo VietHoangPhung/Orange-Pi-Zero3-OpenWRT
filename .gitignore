@@ -1,0 +1,37 @@
+# App build artifacts
+build/
+*.o
+*.log
+*.d
+/tmp/python_ver.log
+
+*.exe
+
+# Docker
+*.tar
+*.gz
+*.img
+*.ipk
+docker-compose.override.yml
+.docker/
+
+# OpenWRT (cloned inside Docker only)
+openwrt/
+
+# Editor & temp files
+*.swp
+*.swo
+*.swn
+*.tmp
+*.bak
+*.~*
+*.orig
+*.rej
+*.patch
+*.diff
+
+# vscode
+.vscode/
+.idea/
+.cache/
+
