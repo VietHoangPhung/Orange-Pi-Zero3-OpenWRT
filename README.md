@@ -45,7 +45,7 @@ make run
 
 ### Prerequisites
 - docker & make installed
-- GNU Make available
+- ~17GB disk available as the docker image size
 
 ### Steps
 
