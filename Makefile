@@ -4,20 +4,22 @@ BUILD_DIR := build
 DOCKER_IMAGE := openwrt-builder:0.1
 CONTAINER_NAME := openwrt_container
 
-all: build
+all: docker-build
 
-build:
-	mkdir -p $(BUILD_DIR)
-	$(CC) -o $(BUILD_DIR)/$(APP_NAME) $(SRC)
+docker-build:
+	docker build -t $(DOCKER_IMAGE) .
 
-run:
+# build:
+# 	mkdir -p $(BUILD_DIR)
+# 	$(CC) -o $(BUILD_DIR)/$(APP_NAME) $(SRC)
+
+run: docker-build
 	docker run --rm -it \
 		-v $$(pwd):/project \
 		--name $(CONTAINER_NAME) \
 		$(DOCKER_IMAGE)
 
-docker-build:
-	docker build -t $(DOCKER_IMAGE) .
+
 
 # package:
 # 	@echo "[*] Packaging into .ipk inside Docker container..."
